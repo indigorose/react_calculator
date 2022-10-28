@@ -1,38 +1,71 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;800;900&family=Roboto:wght@300&display=swap');
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  margin: auto;
+  padding-top: 100px;
+}
+h2 {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calculator-main {
+  width: 200px;
+  height: 230px;
+  margin: auto;
+  background-color: #252a34;
+  padding: 10px;
+}
+.result {
+  padding-right: 20px;
+  margin: 10px 0 0 0;
+  font-size: 16px;
+  background-color: #252a34;
+  height: 20px;
+}
+.input {
+  padding-right: 20px;
+  margin: 10px 0 0 0;
+  font-size: 20px;
+  color: #eaeaea;
+}
+.output {
+  height: 70px;
+  width: 200px;
+  color: #eaeaea;
+  text-align: right;
+  background-color: #252a34;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.keys {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+  padding: 25px 15px;
+  background-color: #252a34;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.keys button:first-child {
+  background-color: #08d9d6;
+  grid-column-end: 3;
+  grid-column-start: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.keys button:nth-child(15) {
+  grid-column-start: 4;
+  grid-row-start: 4;
+  grid-row-end: 6;
+  background-color: #ff2e63;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.keys button:nth-child(16) {
+  background-color: #08d9d6;
+  grid-column-end: 3;
+  grid-column-start: 1;
+}
+button {
+  border: none;
+  background-color: #eaeaea;
 }
